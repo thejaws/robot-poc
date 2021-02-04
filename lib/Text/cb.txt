@@ -1,0 +1,27 @@
+<%! from time import strftime as time %>
+<%! import uuid %>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:end="http://aidon.com/IEC/AdHoc/v4/EndDeviceControlMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2007/EndDeviceControl#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <end:ExecuteCircuitBreakerControlRequest>
+         <!--Optional:-->
+         <end:Header>
+            <mes:Verb>execute</mes:Verb>
+            <mes:Noun>EndDeviceControl</mes:Noun>
+            <mes:Timestamp>${"%Y-%m-%dT%H:%M:%S.0Z"|time}</mes:Timestamp>
+            <mes:Source>HES automatic testing Robot</mes:Source>
+            <mes:ReplyAddress>http://172.19.1.153:50194/AdHocMockServiceB</mes:ReplyAddress>
+            <mes:MessageID>${str(uuid.uuid4())}</mes:MessageID>
+            <mes:CorrelationID>${str(uuid.uuid4())}</mes:CorrelationID>
+            <mes:AccessToken>c13f1c56-9214-4f5c-b886-51676e06d97f</mes:AccessToken>
+            <mes:OrganisationID>F7F0256E-5E91-47DD-B965-AFD99C6EA997</mes:OrganisationID>
+            <mes:UseGuaranteedDelivery>false</mes:UseGuaranteedDelivery>
+         </end:Header>
+         <!--Optional:-->
+         <end:Request>
+            <mes:ID objectType="UsagePoint">${meterpoint}</mes:ID>
+         </end:Request>
+        ${payload}
+      </end:ExecuteCircuitBreakerControlRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
