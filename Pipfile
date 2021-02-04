@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 robotframework = "*"
+flask = "*"
 
 [dev-packages]
 
