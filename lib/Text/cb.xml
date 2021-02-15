@@ -1,0 +1,69 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ReplyCircuitBreakerControlRequest xmlns="http://aidon.com/IEC/AdHoc/v4/EndDeviceControlMessage">
+            <Header>
+                <Verb xmlns="http://iec.ch/TC57/2011/schema/message">reply</Verb>
+                <Noun xmlns="http://iec.ch/TC57/2011/schema/message">EndDeviceControl</Noun>
+                <Timestamp xmlns="http://iec.ch/TC57/2011/schema/message">2021-02-04T11:56:54.269411Z</Timestamp>
+                <Source xmlns="http://iec.ch/TC57/2011/schema/message">Aidon Linkware</Source>
+                <MessageID xmlns="http://iec.ch/TC57/2011/schema/message">def69877-b3e6-4bd2-a15c-baf9297b2beb
+                </MessageID>
+                <CorrelationID xmlns="http://iec.ch/TC57/2011/schema/message">38deeb70-b7ae-44fa-854f-4ae4ed8993c3
+                </CorrelationID>
+                <OrganisationID xmlns="http://iec.ch/TC57/2011/schema/message">F7F0256E-5E91-47DD-B965-AFD99C6EA997
+                </OrganisationID>
+                <UseGuaranteedDelivery xmlns="http://iec.ch/TC57/2011/schema/message">false</UseGuaranteedDelivery>
+            </Header>
+            <Reply>
+                <Result xmlns="http://iec.ch/TC57/2011/schema/message">PARTIAL</Result>
+                <Error xmlns="http://iec.ch/TC57/2011/schema/message">
+                    <code>0.0</code>
+                    <level>INFORM</level>
+                    <details>Ok</details>
+                </Error>
+                <ID objectType="UsagePoint" xmlns="http://iec.ch/TC57/2011/schema/message">7320630166437</ID>
+            </Reply>
+            <Payload>
+                <EndDeviceEvents>
+                    <EndDeviceEvent xmlns="http://iec.ch/TC57/2007/EndDeviceEvent#">
+                        <EndDevice>
+                            <mRID xmlns="http://iec.ch/TC57/2007/EndDevice#">7359992895781688</mRID>
+                        </EndDevice>
+                        <EndDeviceEventType>
+                            <domain>CircuitBreaker</domain>
+                            <eventOrAction>Connected</eventOrAction>
+                        </EndDeviceEventType>
+                    </EndDeviceEvent>
+                    <EndDeviceEvent xmlns="http://iec.ch/TC57/2007/EndDeviceEvent#">
+                        <EndDevice>
+                            <mRID xmlns="http://iec.ch/TC57/2007/EndDevice#">7359992895781688</mRID>
+                        </EndDevice>
+                        <EndDeviceEventType>
+                            <domain>CircuitBreakerButton</domain>
+                            <eventOrAction>Enabled</eventOrAction>
+                        </EndDeviceEventType>
+                    </EndDeviceEvent>
+                    <EndDeviceEvent xmlns="http://iec.ch/TC57/2007/EndDeviceEvent#">
+                        <EndDevice>
+                            <mRID xmlns="http://iec.ch/TC57/2007/EndDevice#">7359992895781688</mRID>
+                        </EndDevice>
+                        <EndDeviceEventType>
+                            <domain>LocalDisconnect</domain>
+                            <eventOrAction>Enabled</eventOrAction>
+                        </EndDeviceEventType>
+                    </EndDeviceEvent>
+                    <EndDeviceEvent xmlns="http://iec.ch/TC57/2007/EndDeviceEvent#">
+                        <EndDevice>
+                            <mRID xmlns="http://iec.ch/TC57/2007/EndDevice#">7359992895781688</mRID>
+                        </EndDevice>
+                        <EndDeviceEventType>
+                            <domain>LocalReconnect</domain>
+                            <eventOrAction>Disabled</eventOrAction>
+                        </EndDeviceEventType>
+                    </EndDeviceEvent>
+                </EndDeviceEvents>
+            </Payload>
+        </ReplyCircuitBreakerControlRequest>
+    </s:Body>
+</s:Envelope>

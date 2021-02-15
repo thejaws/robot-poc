@@ -6,6 +6,11 @@ name = "pypi"
 [packages]
 robotframework = "*"
 flask = "*"
+lxml = "*"
+requests = "*"
+mako = "*"
+pyodbc = "*"
+flask-wtf = "*"
 
 [dev-packages]
 

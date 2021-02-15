@@ -1,13 +1,15 @@
 *** Settings ***
-Documentation    Suite description
+Documentation   Smoke test for cloud HES
+Library  lib/cloud.py
+
+*** Variables ***
+${meter}=  123
 
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+Ping a meter
+    [Tags]    SMOKE
+    Ping meter   ${meter}
 
-*** Keywords ***
-Provided precondition
-    Setup system under test
+#*** Keywords ***
+#Provided precondition
+#    Setup system under test
